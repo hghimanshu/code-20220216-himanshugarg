@@ -2,7 +2,7 @@ import pytest
 from fastapi.testclient import TestClient
 from bmi_calculator.server import app
 
-def test_logger_setup():
+def test_service_setup():
     with TestClient(app) as test_client:
         response = test_client.get("/health")
     assert response.status_code == 200
